@@ -57,13 +57,41 @@
 // delete user.name;
 // console.log(user.name);
 
-let makeUserName = function (name, age) {
-  return {
-    name,
-    age,
-  };
+// let makeUserName = function (name, age) {
+//   return {
+//     name,
+//     age,
+//   };
+// };
+// let userName = prompt("whats your name?", "");
+// let userAge = prompt("whats your age?", "");
+// let user = makeUserName(userName, userAge);
+// alert(`your name is ${user.name} and your age is ${user.age} `);
+
+//for in loop exercise
+
+let obj = {
+  name: "abc",
+  id: 9804,
+  age: 34,
 };
-let userName = prompt("whats your name?", "");
-let userAge = prompt("whats your age?", "");
-let user = makeUserName(userName, userAge);
-alert(`your name is ${user.name} and your age is ${user.age} `);
+for (let key in obj) {
+  console.log(key);
+  console.log(obj[key]);
+}
+
+let isEmpty = function (obj) {
+  let flag = true;
+  for (let key in obj) {
+    flag = false;
+
+  }
+  return flag;
+};
+let schedule = {};
+
+alert(isEmpty(schedule)); // true
+
+schedule["8:30"] = "get up";
+
+alert(isEmpty(schedule)); // false
