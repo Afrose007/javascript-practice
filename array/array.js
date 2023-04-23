@@ -17,13 +17,5 @@ states[stateIndex] = "NY";
 console.log(states);
 
 function findIndex(length) {
-  let index;
-  let halfLength = length / 2;
-
-  if (length % 2 == 0) {
-    index = halfLength - 1;
-  } else {
-    index = Math.ceil(halfLength) - 1;
-  }
-  return index;
+  return Math.ceil(length / 2) - 1;
 }
