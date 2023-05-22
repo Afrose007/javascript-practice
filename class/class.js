@@ -33,7 +33,7 @@ const Person = class {
     else alert(`${name} is not a fullName`);
   }
 
-  // instant method
+  // static method
   static hey() {
     console.log("hey 👋");
     console.log(this);
